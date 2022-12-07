@@ -2,9 +2,10 @@
   "name": "my-personal-portfolio-jp",
   "version": "1.0.0",
   "description": "This is my personal portfolio",
+  "type" : "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev" : "nodemon src/index.js"
   },
   "repository": {
     "type": "git",
