@@ -10,8 +10,8 @@ router.get("/about", (req, res) => {
   res.send("About me");
 });
 
-router.get("/Contact", (req,res ) => {
-  res.send("Contact me");
+router.get("/contact", (req,res ) => {
+  res.render('index.ejs', {title: "My page"});
 });
 
 export default router;

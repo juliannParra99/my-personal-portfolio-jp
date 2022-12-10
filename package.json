@@ -2,10 +2,10 @@
   "name": "my-personal-portfolio-jp",
   "version": "1.0.0",
   "description": "This is my personal portfolio",
-  "type" : "module",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev" : "nodemon src/index.js"
+    "dev": "nodemon src/index.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/juliannParra99/my-personal-portfolio-jp#readme",
   "dependencies": {
+    "ejs": "^3.1.8",
     "express": "^4.18.2",
     "morgan": "^1.10.0"
   },
