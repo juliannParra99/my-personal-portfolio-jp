@@ -3,15 +3,18 @@ import {  Router } from "express";
 const router = Router();
 
 router.get("/", (req, res) => {
-  res.send("my principal page");
+  res.render('index.ejs', { title : "Hello to my portfolio!"});
 });
 
 router.get("/about", (req, res) => {
-  res.send("About me");
+  res.render('about.ejs',{title : "About me"})
 });
 
 router.get("/contact", (req,res ) => {
-  res.render('index.ejs', {title: "My page"});
+  res.render('contact.ejs', {title: "Contact"});
 });
+
+
+
 
 export default router;
