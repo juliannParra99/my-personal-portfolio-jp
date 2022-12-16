@@ -1,14 +1,14 @@
-import  express from "express";
+import express from "express";
 import indexRoutes from "./routes/index_routes.js";
 //necesario para crear las rutas absolutas para que pueda ser accedido taal desde cualqueir sistema operativo
-import {dirname, join} from "path" // retorna una ruta node path hace que la ruta obtenida sea distinta dependiendo del sistema operativo; dirname devuelve un  string del nombre de directorio path; El path.join()método une todos pathlos segmentos dados utilizando el separador específico de la plataforma como delimitador, osea, les brinda una concatenacion acorde segun el sistema operativo
+import { dirname, join } from "path"; // retorna una ruta node path hace que la ruta obtenida sea distinta dependiendo del sistema operativo; dirname devuelve un  string del nombre de directorio path; El path.join()método une todos pathlos segmentos dados utilizando el separador específico de la plataforma como delimitador, osea, les brinda una concatenacion acorde segun el sistema operativo
 
 //Esta función garantiza la decodificación correcta de los caracteres codificados en porcentaje, así como una cadena de ruta absoluta válida multiplataforma
-import  {fileURLToPath} from "url"
+import { fileURLToPath } from "url";
 
 //configuro mis rutas absolutas.
 const __filename = fileURLToPath(import.meta.url); // La ruta del ARCHIVO Node.js específico de la plataforma completamente resuelta. devuelvela ruta de carpetas carpeta y archivo
-const __dinarme = dirname(__filename)//devulve la ruta  de la carpeta donde esta el archivo,de filename
+const __dinarme = dirname(__filename); //devulve la ruta  de la carpeta donde esta el archivo,de filename
 // console.log('this is file nme: ',__filename);
 // console.log('this is dirname',__dinarme);
 //la configuracion de  __Dirname es para que cuando configuremos el uso de template engine que vamos a utilizar, le brindemos el acceso a la ruta  abosluta donde se encuentra nuestra carpeta VIEWS, esto para que segun el sitema operativo, de la ruta acorde y no haya que cambiar ningun acceso
@@ -18,21 +18,32 @@ const __dinarme = dirname(__filename)//devulve la ruta  de la carpeta donde esta
 //TODO EL PROCESO DE TRAER UNA RUTA ABSOLUTA, ES PARA PODER INDICAR LA RUTA ABSOLUTA AL MOMENTO DE UTILIZAR UN TEMPLATE ENGINE.
 
 const app = express();
-app.use('/',indexRoutes)
+app.use("/", indexRoutes);
 
 //traigo mis routes, e indico que mi app la va a usar
 
 //configuracion de motor de plantilla.
-app.set('view engine', 'ejs')
-app.set('views', join(__dinarme, 'views'))//concatena la ruta almacenada en __dirname con 'views'
+app.set("view engine", "ejs");
+app.set("views", join(__dinarme, "views")); //concatena la ruta almacenada en __dirname con 'views'
 // console.log(join(__dinarme, 'views'));todo listo para usar el motor de plantilla
-
 
 //Servir archivos estaticos
 
-app.use(express.static(join(__dinarme, 'public')))
+app.use(express.static(join(__dinarme, "public")));
 // console.log(join(__dinarme, 'public'))
+
+// middleware de manejo de errores
+app.use((req, res, next) => {
+    res.status(404).render("404", { titulo: "Página 404" });
+  });
+
+  //manejador de errores
+  app.use((err, req, res, next) => {
+    console.error(err.stack)
+    res.status(500).render('404.ejs', {title: "404", description: "somethin broke"})
+  })
+
 const port = 3000;
-app.listen(port,()=>{
-    console.log(`server on port ${port}`)
-})
+app.listen(port, () => {
+  console.log(`server on port ${port}`);
+});
