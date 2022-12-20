@@ -25,6 +25,8 @@ app.use("/", indexRoutes);
 //configuracion de motor de plantilla.
 app.set("view engine", "ejs");
 app.set("views", join(__dinarme, "views")); //concatena la ruta almacenada en __dirname con 'views'
+// esto funciona por que index se encuentra en crc, al mismo nivel que la carpeta views; __dinarme consigue la ruta actual, y join lo une con el archivo
+
 // console.log(join(__dinarme, 'views'));todo listo para usar el motor de plantilla
 
 //Servir archivos estaticos
@@ -33,15 +35,16 @@ app.use(express.static(join(__dinarme, "public")));
 // console.log(join(__dinarme, 'public'))
 
 // middleware de manejo de errores
-app.use((req, res, next) => {
-    res.status(404).render("404", { titulo: "Página 404" });
+app.use((err,req, res, next) => {
+    console.error(err.stack)
+    res.status(404).render("404", { title: "Página 404" });
   });
 
   //manejador de errores
-  app.use((err, req, res, next) => {
-    console.error(err.stack)
-    res.status(500).render('404.ejs', {title: "404", description: "somethin broke"})
-  })
+  // app.use((err, req, res, next) => {
+  //   console.error(err.stack)
+  //   res.status(404).render('404', {error: "404", description : "something broke" })
+  // })
 
 const port = 3000;
 app.listen(port, () => {
