@@ -30,7 +30,6 @@ app.set("views", join(__dinarme, "views")); //concatena la ruta almacenada en __
 // console.log(join(__dinarme, 'views'));todo listo para usar el motor de plantilla
 
 //Servir archivos estaticos
-
 app.use(express.static(join(__dinarme, "public")));
 // console.log(join(__dinarme, 'public'))
 
