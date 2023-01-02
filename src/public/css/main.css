@@ -13,6 +13,13 @@ body{
     
 }
 
+//about me
+
+
+//my skilss
+
+
+
 //projects-section.
 
 
@@ -57,11 +64,7 @@ body{
   }
   
   
-  //my skilss section
-  section#about-me{
-    background-color: blue;
-  }
-
+//footer
 .social-link{
   list-style:none
 }
