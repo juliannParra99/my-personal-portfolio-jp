@@ -86,11 +86,50 @@ body{
   
 //footer
 .social-link{
-  list-style:none
+  list-style:none;
 }
 
-//PRUEBAS RANDOM
+//PRUEBAS RANDOM//
 
 .ul-skills{
   background:red;
+}
+
+
+//footer
+footer{
+  min-height: 500px;
+}
+
+.iconos-redes-sociales a{
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  margin: 10px;
+  border-radius: 50%;
+  transition: all 0.2s ease-in;
+
+}
+
+.iconos-redes-sociales i{
+  color: #fff;
+  font-size: 1.5rem;
+  transition: all 0.2s ease-in;
+}
+
+.iconos-redes-sociales a:hover{
+  background-color: #fff;
+}
+
+.iconos-redes-sociales a:hover i{
+  color: black;
+}
+
+.derechos-de-autor{
+  font-size: 20px;
+  color: #aeaeae;
+  padding: 20px;
 }
