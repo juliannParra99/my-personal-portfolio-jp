@@ -71,6 +71,11 @@ about me */
   text-align: center;
 }
 
+/* my skills */
+.my-skills{
+  min-height: 450px;
+  background-color: #a53131;
+}
 
 /* carrusel */
 #carrusel-tecnologias .carousel{
