@@ -12,9 +12,11 @@
     <%- include('partials/navigation.ejs') %>
     
     <!--Main content-->
-    <section id="welcome-section" class=" container d-flex flex-column justify-content-center align-items-center text-center">
-        <h1>Hello world </h1>
-        <h2>I'm Julián Parra, I'm a Full stack Software developer.</h2>
+    <section  class="welcome-section  d-flex flex-column justify-content-center align-items-stretch text-center">
+        <div class="hero  d-flex flex-column justify-content-center align-items-center">
+          <h1>Hello world </h1>
+          <h2>I'm Julián Parra, I'm a Full stack Software developer.</h2>
+        </div>
         <div class="my-cv">
             <button>
                 <a href="https://drive.google.com/file/d/12GKduqGe7Y5MWcw63j-17MzzzGGLkJV4/view" download="Julian_Parra_CV.pdf" target="_blank">Download CV</a>
@@ -22,14 +24,18 @@
         </div>
     </section>
 
-    <section id="about-me" class="container py-5 text-center" >
-      <h2>About me</h2>
-        <p>
+    <section id="about-me" class=" about-me " >
+      <div class="contenedor">
+        <h2 class="seccion-titulo">About me</h2>
+        <p class="seccion-texto">
             Soy un desarrollador de software full stack Jr., con orientacion hacia el backend, pero con diversos proyectos frontend. 
         </p>
+      </div>
+    </section>
+    <section id="my-skills d-flex flex-column justify-content-center align-items-center">
         <div id="my-skills" class="container my-5 text-center" >
-          <h2>My my-skills</h2>
-          <ul class="ul-skills">
+          <h2 class="seccion-titulo">My my skills</h2>
+          <ul class="ul-skills d-flex flex-column">
             <div class="row row-cols-4">
               <div class="col">
                 <li>C#</li>
@@ -58,11 +64,11 @@
               <div class="col">
                 <li>Java</li>
               </div>
-
+  
             </div>
           </ul>
         </div>
-
+  
         <!--carrusel-->
         <div id="carrusel-tecnologias" class="carousel slide carousel-dark">
           <div class="carousel-inner">
@@ -94,11 +100,11 @@
             <span class="visually-hidden">Next</span>
           </button>
         </div>
-
+  
         <!--imagenes grid-->
-
+  
         <div class="container text-center">
-
+  
           <div class="row row-cols-3 justify-content-center">
             <div class="col">
               <div class="card" >
@@ -139,10 +145,12 @@
                 
       
           </div>
-    </section>  
+    </section>
+
+
 
     <section id="projects" class="projects-section">
-      <h2 class="projects-section-header">These are some of my projects</h2>
+      <h2 class="seccion-titulo projects-section-header">These are some of my projects</h2>
       <div class="projects-grid">
        <a class="project"  target="_blank" href="https://codepen.io/freeCodeCamp/full/zNqgVx">
          <img class="project-image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg" alt="project">
@@ -175,5 +183,7 @@
       
 
     <%- include('partials/footer.ejs') %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
