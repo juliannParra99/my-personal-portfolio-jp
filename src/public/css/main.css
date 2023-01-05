@@ -207,3 +207,15 @@ footer{
   color: #aeaeae;
   padding: 20px;
 }
+
+/* Adaptable (Responsivo) */
+
+@media screen and (max-width: 400px) {
+  .overlay p {
+    font-size: 18px;
+  }
+
+  .overlay i {
+    font-size: 40px;
+  }
+}
