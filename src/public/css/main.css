@@ -29,12 +29,31 @@ h1{
   font-family: 'Noto Sans', sans-serif;
   font-weight: 700;
 }
+
+/* navbar */
+
+.navbar {
+  background-color: #1A1A40;
+}
+
+.navbar-collapse {
+  align-items: center;
+  justify-content: space-between;  
+}
+
+.navbar-toggler{
+  background-color: #e7e0e0;
+}
+
+.navbar .nav-link {
+  color: white;
+}
+
 /* 
 welcome-section */
 
 .welcome-section{
-  background-color: #610b12;
-  min-height: 450px;
+  height: 100vh;
   text-align: center;
 }
 
@@ -61,8 +80,8 @@ welcome-section */
 about me */
 
 .about-me{
-  background-color: #190d46;
-  height: 500px;
+  background-color: #31031b;
+  height: 100vh;
   padding: 10px;
 }
 
@@ -74,7 +93,7 @@ about me */
 /* my skills */
 .my-skills{
   min-height: 450px;
-  background-color: #a53131;
+  background-color: #082032;
 }
 
 /* carrusel */
