@@ -52,6 +52,20 @@ h1{
 /* 
 welcome-section */
 
+.cv-button {
+  background-color: rgba(163, 30, 59, 0.863);
+  border-radius: 4%;
+}
+
+.cv-button:hover{
+  background-color:  rgba(138, 26, 50, 0.863);
+}
+
+.cv-button a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.836);
+}
+
 .welcome-section{
   height: 100vh;
   text-align: center;
