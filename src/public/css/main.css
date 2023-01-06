@@ -34,6 +34,9 @@ h1{
 
 .navbar {
   background-color: #1A1A40;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight:500;
 }
 
 .navbar-collapse {
@@ -106,8 +109,13 @@ about me */
 
 /* my skills */
 .my-skills{
+  font-family: 'Noto Sans', sans-serif;
   min-height: 450px;
   background-color: #082032;
+  }
+
+  .skill-item{
+    font-weight: 700;
   }
 
 /* carrusel */
