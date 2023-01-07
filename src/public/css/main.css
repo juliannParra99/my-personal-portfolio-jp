@@ -139,8 +139,9 @@ about me */
 
 .tecnologias-imagen{
    height: 150px;
-   width: 150px;
+   width: 250px; /*orginalmente tenia 150*/
    margin: 10px 10px 20px 10px;
+   border-radius: 10%;
 } 
 
 
