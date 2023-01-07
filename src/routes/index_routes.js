@@ -3,7 +3,7 @@ import {  Router } from "express";
 const router = Router();
 
 router.get("/", (req, res) => {
-  res.render('index.ejs', { title : "Hello to my portfolio!"});//render acepta como parmetro un archivo de la carpeta viws. Para eso configuramos el dirname; index.js es el archivo que se renderiza y title  es un valor al que podemos acceder.
+  res.render('index.ejs', { title : "Julian Parra | Full stack developer"});//render acepta como parmetro un archivo de la carpeta viws. Para eso configuramos el dirname; index.js es el archivo que se renderiza y title  es un valor al que podemos acceder.
 });
 
 router.get("/about", (req, res) => {
